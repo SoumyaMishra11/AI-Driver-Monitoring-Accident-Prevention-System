@@ -1,4 +1,4 @@
-\# Smart Driver Monitoring System
+# Smart Driver Monitoring System
 
 
 
@@ -10,97 +10,90 @@ The system analyzes facial landmarks, eye movement, and head pose to identify un
 
 
 
-\---
+---
 
 
 
-\## Overview
-
+## Overview
 
 
 This project simulates an intelligent driver safety system that continuously observes the driver and evaluates attentiveness.
 
-
-
 It combines facial analysis with temporal stability logic to reduce false alarms and provide reliable detection.
 
 
-
-\---
-
+---
 
 
-\## Key Features
+## Key Features
 
 
+- Real-time face tracking using MediaPipe
 
-\- Real-time face tracking using MediaPipe
+- Drowsiness detection using Eye Aspect Ratio (EAR)
 
-\- Drowsiness detection using Eye Aspect Ratio (EAR)
+- Distraction detection using head pose (pitch and yaw)
 
-\- Distraction detection using head pose (pitch and yaw)
+- Gaze tracking for attention monitoring
 
-\- Gaze tracking for attention monitoring
+- Experimental seatbelt detection (heuristic-based)
 
-\- Experimental seatbelt detection (heuristic-based)
+- Live web dashboard for visualization
 
-\- Live web dashboard for visualization
+- Audio alerts for unsafe behavior
 
-\- Audio alerts for unsafe behavior
-
-\- CSV logging for events and metrics
+- CSV logging for events and metrics
 
 
 
-\---
+---
 
 
 
-\## System Workflow
+## System Workflow
 
 
 
-1\. Capture video frames using a webcam.
+1. Capture video frames using a webcam.
 
-2\. Detect facial landmarks using MediaPipe.
+2. Detect facial landmarks using MediaPipe.
 
-3\. Compute EAR for eye closure detection.
+3. Compute EAR for eye closure detection.
 
-4\. Estimate head pose for distraction detection.
+4. Estimate head pose for distraction detection.
 
-5\. Track gaze direction for attention analysis.
+5. Track gaze direction for attention analysis.
 
-6\. Apply temporal smoothing to avoid false triggers.
+6. Apply temporal smoothing to avoid false triggers.
 
-7\. Trigger alerts and log events.
-
-
-
-\---
+7. Trigger alerts and log events.
 
 
-
-\## Tech Stack
+---
 
 
 
-\- Python
-
-\- OpenCV
-
-\- MediaPipe
-
-\- FastAPI
-
-\- NumPy
+## Tech Stack
 
 
 
-\---
+- Python
+
+- OpenCV
+
+- MediaPipe
+
+- FastAPI
+
+- NumPy
 
 
 
-\## Installation
+---
+
+
+
+## Installation
 
 
 
