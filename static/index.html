@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Driver Monitoring System</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="dot"></div>
+        <div>
+          <div class="title">Smart Driver Monitoring</div>
+          <div class="subtitle">Web UI (no Tkinter)</div>
+        </div>
+      </div>
+      <div class="status">
+        <span class="pill" id="runningPill">Stopped</span>
+        <span class="pill pill-muted" id="fpsPill">FPS: —</span>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="panel">
+        <h2>Controls</h2>
+        <div class="row">
+          <button class="btn btn-primary" id="startBtn">Start</button>
+          <button class="btn" id="stopBtn">Stop</button>
+        </div>
+
+        <div class="form">
+          <label>
+            <span>Camera index</span>
+            <input type="number" id="cameraIndex" min="0" max="10" step="1" value="0" />
+          </label>
+
+          <label class="inline">
+            <input type="checkbox" id="logEnabled" />
+            <span>Enable CSV logging</span>
+          </label>
+
+          <label>
+            <span>CSV path</span>
+            <input type="text" id="logPath" placeholder="logs/events.csv" />
+          </label>
+
+          <label>
+            <span>Alarm volume (0.0–1.0)</span>
+            <input type="number" id="volume" min="0" max="1" step="0.05" value="0.8" />
+          </label>
+
+          <label>
+            <span>Cooldown seconds</span>
+            <input type="number" id="cooldown" min="0.2" max="10" step="0.2" value="1.2" />
+          </label>
+
+          <button class="btn btn-ghost" id="applyBtn">Apply settings</button>
+          <div class="hint" id="hint"></div>
+        </div>
+      </section>
+
+      <section class="viewer">
+        <div class="viewerHeader">
+          <h2>Live stream</h2>
+          <div class="metrics" id="metrics"></div>
+        </div>
+        <div class="frame">
+         <img src="/video" style="width:100%; border-radius:12px;" />
+          <div class="empty" id="emptyState">
+            Click <b>Start</b> to begin. If the stream stays blank, try a different camera index.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
+
